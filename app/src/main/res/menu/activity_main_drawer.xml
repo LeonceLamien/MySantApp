@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_20"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_step"
+            android:icon="@drawable/round_directions_run_20"
+            android:title="@string/menu_step" />
+
+        <item
+            android:id="@+id/nav_imc"
+            android:icon="@drawable/imc"
+            android:title="@string/menu_imc" />
+        <item
+            android:id="@+id/nav_stat"
+            android:icon="@drawable/monitoring_24px"
+            android:title="@string/menu_stat" />
+    </group>
+</menu>

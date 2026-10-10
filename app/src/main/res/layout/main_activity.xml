@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+     <TextView
+         android:id="@+id/stepCountTargetTextView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="22dp"
+         android:text="@string/step_goal_10000"
+         android:textColor="@color/black"
+         android:textSize="20sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+     <ProgressBar
+         android:id="@+id/progressBar"
+         style="?android:attr/progressBarStyleHorizontal"
+         android:layout_width="167dp"
+         android:layout_height="181dp"
+         android:background="@drawable/cercle"
+         android:progressDrawable="@drawable/user_progress"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/mapView"
+         app:layout_constraintVertical_bias="0.307" />
+
+     <TextView
+         android:id="@+id/stepCountTextView"
+         android:layout_width="100dp"
+         android:layout_height="112dp"
+         android:layout_marginTop="50dp"
+         android:layout_marginEnd="173dp"
+         android:textColor="@color/black"
+         android:textSize="24sp"
+         app:layout_constraintEnd_toEndOf="@+id/progressBar"
+         app:layout_constraintTop_toBottomOf="@+id/speedTextView" />
+
+     <Button
+         android:id="@+id/start_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="left"
+         android:onClick="onStartSession"
+         android:text="Start Session"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+     <Button
+         android:id="@+id/end_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="right"
+         android:onClick="onEndSession"
+         android:text="End Session"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+     <TextView
+         android:id="@+id/speedTextView"
+         android:layout_width="101dp"
+         android:layout_height="45dp"
+         android:layout_below="@id/stepCountTextView"
+         android:layout_marginTop="77dp"
+         android:layout_marginEnd="172dp"
+         android:text="Speed: 0"
+         android:textColor="@color/black"
+         android:textSize="24sp"
+         app:layout_constraintEnd_toEndOf="@+id/progressBar"
+         app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+     <Chronometer
+         android:id="@+id/chronometer"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_marginStart="24dp"
+         android:layout_marginTop="77dp"
+         android:textSize="24sp"
+         android:textStyle="bold"
+         app:layout_constraintStart_toEndOf="@+id/progressBar"
+         app:layout_constraintTop_toBottomOf="@+id/mapView" />
+
+     <com.mapbox.mapboxsdk.maps.MapView
+         android:id="@+id/mapView"
+         android:layout_width="406dp"
+         android:layout_height="336dp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent">
+
+     </com.mapbox.mapboxsdk.maps.MapView>
+
+     <TextView
+         android:id="@+id/stepCountDistance"
+         android:layout_width="83dp"
+         android:layout_height="125dp"
+         android:layout_marginStart="24dp"
+         android:layout_marginTop="25dp"
+         android:text="Distance traveled: 0 m"
+         android:textColor="@color/black"
+         android:textSize="20sp"
+         app:layout_constraintStart_toEndOf="@+id/progressBar"
+         app:layout_constraintTop_toBottomOf="@+id/chronometer" />
+
+
+     <!-- <com.mapbox.mapboxsdk.maps.MapView
+          android:id="@+id/mapView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+          -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

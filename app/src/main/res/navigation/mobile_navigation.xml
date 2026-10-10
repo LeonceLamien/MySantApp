@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.my_health_app.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_step"
+        android:name="com.example.my_health_app.ui.step.StepFragment"
+        android:label="@string/menu_step"
+        tools:layout="@layout/main_activity" />
+
+    <fragment
+        android:id="@+id/nav_imc"
+        android:name="com.example.my_health_app.ui.imc.ImcFragment"
+        android:label="@string/menu_imc"
+        tools:layout="@layout/fragment_imc" />
+    <fragment
+        android:id="@+id/nav_stat"
+        android:name="com.example.my_health_app.ui.stat.StatFragment"
+        android:label="@string/menu_stat"
+        tools:layout="@layout/fragment_stat" />
+
+</navigation>

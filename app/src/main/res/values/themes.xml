@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.My_Health_App" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:textColor">@color/black</item>
+        <!-- Couleur de fond en mode clair -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Couleur du texte en mode clair -->
+        <item name="android:textColor">@color/black</item>
+        <!-- Couleur de fond en mode clair -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="Theme.My_Health_App" parent="Base.Theme.My_Health_App" />
+
+    <style name="Theme.My_Health_App.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.My_Health_App.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.My_Health_App.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
